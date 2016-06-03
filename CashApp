@@ -1,0 +1,17 @@
+package com.dy.cy.test;
+import java.util.Scanner;
+public class CashApp{
+	public static void main(String[] args){
+		CashCard[] cards = {
+				new CashCard("A001",500,0),
+				new CashCard("A002",300,0),
+				new CashCard("A003",1000,1)
+		};
+		Scanner scanner = new Scanner(System.in);
+		for(CashCard card:cards){
+			System.out.printf("´¢Öµ:",card.number,card.balance,card.bonus);
+			card.store(scanner.nextInt());
+			System.out.printf("Ã÷Ï¸",card.balance,card.bonus,card.number);
+		}
+	}
+}
